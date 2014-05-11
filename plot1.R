@@ -13,4 +13,7 @@ plot1 <- function(){
   # Now plotting the histogram  of Global Active Power (in Kilowatts)
   hist(data$Global_active_power, col='red', xlab="Global Active Power (kilowatts)", ylab="Frequency", main="Global Active Power")
   
+  # Now copying the histogram to PNG file
+  dev.copy(png, "plot1.png")
+  dev.off()
 }
