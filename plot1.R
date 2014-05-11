@@ -4,7 +4,7 @@ plot1 <- function(){
   relevantLineNumbers <- grep('^[1-2]/2/2007', readLines("./household_power_consumption.txt"))
   
   # Now getting the subset of data by using the read.table function
-  data <- read.table(file="./household_power_consumption.txt", sep=";", skip = relevantLineNumbers[1]-1, nrows = length(relevantLineNumbers), stringsAsFactors=FALSE, header=TRUE)
+  data <- read.table(file="./household_power_consumption.txt", sep=";", skip = relevantLineNumbers[1]-1, nrows = length(relevantLineNumbers)-1, stringsAsFactors=FALSE, header=TRUE)
   
   # Now getting the header values from the original file and assigning them as the header in the subset of data
   headerdata <- read.table(file="./household_power_consumption.txt", sep=";", nrows = 1, stringsAsFactors=FALSE, header=FALSE)
