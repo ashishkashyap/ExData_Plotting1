@@ -31,7 +31,7 @@ plot4 <- function(){
   lines(a, data$Sub_metering_3, col="blue")
   
   # Now adding legend
-  legend("topright", pch=NA, lwd=1, col=c("black","red", "blue"), legend=c("Sub_metering_1", "Sub_metering_2", "sub_metering_3"), cex=0.1, bty="n", text.font=50)
+  legend("topright", pch=NA, lwd=1, col=c("black","red", "blue"), legend=c("Sub_metering_1", "Sub_metering_2", "sub_metering_3"), cex=0.1, pt.cex=20, bty="n", text.font=50)
 
   # Now plotting with type=n
   plot(dates, data$Voltage, type="n", ylab="Voltage", xlab="datetime")
@@ -46,6 +46,6 @@ plot4 <- function(){
   lines(dates, data$Global_reactive_power)
   
   # Now copying the overall graph to PNG file
-  dev.copy(png, "plot4.png", width=960, height=960)
+  dev.copy(png, "plot4.png", width=480, height=480)
   dev.off()
 }
